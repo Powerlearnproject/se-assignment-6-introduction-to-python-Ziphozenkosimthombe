@@ -187,5 +187,13 @@ try:
         print(content)
 except FileNotFoundError:
     print("The file does not exist.")
-```
+
+# Script to write a list of strings to a file
+lines = ["First line", "Second line", "Third line"]
+try:
+    with open('output.txt', 'w') as file:
+        for line in lines:
+            file.write(line + "\n")
+except Exception as e:
+    print(f"An error occurred: {e}")
 ```
